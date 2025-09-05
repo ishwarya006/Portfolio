@@ -290,5 +290,80 @@ footer{ text-align:center; padding:20px 0; color: #edf2f7; background: rgba(0,0,
   border: 5px solid rgba(255,255,255,0.95);
   box-shadow: var(--shadow);
 }
+/* Mobile view fixes */
+@media (max-width: 768px) {
+  /* Center all section text */
+  section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  /* About Me text */
+  .home-text p,
+  #about p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Education cards centered */
+  #education .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #education .card {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  /* Skills neat in single column */
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .skill-card {
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+  }
+
+  /* Headings spacing */
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+}
 
 
+/* ✅ Mobile view fixes */
+@media (max-width: 768px) {
+  /* Home section layout fix */
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home img {
+    width: 200px;        /* smaller image size */
+    height: auto;
+    margin-bottom: 20px; /* add space below image */
+  }
+
+  .home-text {
+    margin-top: 10px;
+  }
+
+  .home-text h1, 
+  .home-text h2 {
+    text-align: center;
+    margin: 5px 0;
+  }
+}
