@@ -23,7 +23,7 @@
   --input-border: rgba(0,0,0,0.08);
 }
 
-/* Dark theme overrides (applied when <body class="dark-mode">) */
+/* Dark theme overrides */
 body.dark-mode{
   --page-bg: #1a202c;
   --page-bg-size: auto;
@@ -57,7 +57,6 @@ body{
 body:not(.dark-mode){
   animation: gradientShift 8s ease infinite;
 }
-
 @keyframes gradientShift {
   0%{ background-position: 0% 50%; }
   50%{ background-position: 100% 50%; }
@@ -193,8 +192,22 @@ nav{
 .home-text p{ margin: 16px 0 26px; color: var(--heading-color); opacity: 0.95; }
 
 /* profile image */
-.home-image-wrapper{ width: 340px; height: 340px; display:flex; align-items:center; justify-content:center; }
-.home-image-wrapper img{ width: 300px; height: 400px; object-fit: cover; border-radius: 50%; border: 6px solid rgba(255,255,255,0.95); box-shadow: var(--shadow); }
+.home-image-wrapper{
+  width: 260px;
+  height: 260px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin: 0 auto;
+}
+.home-image-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid rgba(255,255,255,0.95);
+  box-shadow: var(--shadow);
+}
 
 /* -------- Grids & Cards -------- */
 .grid-container{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:25px; align-items: stretch; }
@@ -252,7 +265,7 @@ footer{ text-align:center; padding:20px 0; color: #edf2f7; background: rgba(0,0,
 /* small utilities */
 .center { text-align:center; }
 
-/* -------- Responsive -------- */
+/* -------- Responsive Fixes -------- */
 @media (max-width: 992px){
   .home-content { flex-direction: column-reverse; text-align:center; }
   .home-image-wrapper { margin-bottom: 20px; }
@@ -261,6 +274,21 @@ footer{ text-align:center; padding:20px 0; color: #edf2f7; background: rgba(0,0,
   .nav-links{ display:none; }
   #mobileMenuButton{ display:inline-flex; }
   #mobileMenu { top:64px; }
-  .home-text h1{ font-size: 2.2rem; }
+  .home-text h1{ font-size: 2rem; line-height: 1.3; }
+  .home-text h2{ font-size: 1.2rem; }
+  .grid-container { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .card { padding: 16px; font-size: 0.95rem; }
   #certificates .card img { height:150px; }
 }
+
+.home-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;   /* softer rounded edges */
+  object-fit: cover;
+  border: 5px solid rgba(255,255,255,0.95);
+  box-shadow: var(--shadow);
+}
+
+
