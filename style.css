@@ -194,7 +194,7 @@ nav{
 
 /* profile image */
 .home-image-wrapper{ width: 340px; height: 340px; display:flex; align-items:center; justify-content:center; }
-.home-image-wrapper img{ width: 300px; height: 300px; object-fit: cover; border-radius: 50%; border: 6px solid rgba(255,255,255,0.95); box-shadow: var(--shadow); }
+.home-image-wrapper img{ width: 300px; height: 400px; object-fit: cover; border-radius: 50%; border: 6px solid rgba(255,255,255,0.95); box-shadow: var(--shadow); }
 
 /* -------- Grids & Cards -------- */
 .grid-container{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:25px; align-items: stretch; }
